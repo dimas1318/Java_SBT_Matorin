@@ -1,6 +1,6 @@
 package ru.sbt.mipt.terminal;
 
-import ru.sbt.mipt.Validator.PinValidator;
+import ru.sbt.mipt.validator.PinValidator;
 import ru.sbt.mipt.exception.*;
 import ru.sbt.mipt.server.TerminalServer;
 

@@ -1,4 +1,4 @@
-package ru.sbt.mipt.Validator;
+package ru.sbt.mipt.validator;
 
 import ru.sbt.mipt.exception.AccountIsLockedException;
 import ru.sbt.mipt.exception.InvalidPinException;
