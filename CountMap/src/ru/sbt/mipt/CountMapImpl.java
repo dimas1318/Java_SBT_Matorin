@@ -52,9 +52,9 @@ public class CountMapImpl<E> implements CountMap<E> {
     }
 
     @Override
-    public void addAll(CountMap<E> source) {
-        for (Object o : source.toMap().keySet()) {
-            map.put((E) o, map.get(o) + (Integer) source.toMap().get(o));
+    public void addAll(CountMap<? extends E> source) {
+        for (E o : source.toMap().keySet()) {
+            map.put(o, map.get(o) + (Integer) source.toMap().get(o));
         }
     }
 
@@ -64,7 +64,7 @@ public class CountMapImpl<E> implements CountMap<E> {
     }
 
     @Override
-    public void toMap(Map<E, Integer> destination) {
+    public void toMap(Map<? super E, Integer> destination) {
         destination.putAll(map);
     }
 }
